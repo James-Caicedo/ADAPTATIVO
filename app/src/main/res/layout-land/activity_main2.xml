@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/fondo">
+
+
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="36sp"
+                android:textColor="@color/black"
+                android:textStyle="bold|italic"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:text="Selecciona tu icono" />
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="250sp"
+                android:id="@+id/image3"
+                android:layout_height="250sp"
+                android:src="@drawable/imagen_1"
+                app:layout_constraintTop_toBottomOf="@id/textView2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/image4"
+                app:layout_constraintBottom_toTopOf="@id/button2"
+                />
+
+            <ImageView
+                android:id="@+id/image4"
+                android:layout_width="300sp"
+                android:layout_height="250sp"
+                app:srcCompat="@drawable/imagen_2"
+                app:layout_constraintTop_toBottomOf="@id/textView2"
+                app:layout_constraintStart_toEndOf="@id/image3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/button2"/>
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Seleccionar"
+                android:textSize="30sp"
+                android:layout_marginTop="10sp"
+                app:layout_constraintTop_toBottomOf="@id/image4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</RelativeLayout>
